@@ -2,13 +2,11 @@ Tail (or pipe) anything to a web browser or web browsers.
 
 ## ESTail (Event Source Tail)
 
-I want to watch some log files on a remote browser. This makes it easy.
-
 Useage
 
     tail -f somefile.log | ./estail
 
-Open the browser to localhost:8080
+Open a browser to localhost:8080 or maybe MachineName.local:8080
 
 Need to clear the buffer? Refresh the browser.
 
@@ -21,6 +19,10 @@ Requires [Go](http://golang.org/doc/install) to be installed
     go get && go build
 
 You should now have a binary file `estail`. Install in your PATH and you will be good to go.
+
+### Why
+
+I wanted to stream some log files from one machine to an ipad.
 
 ### Options
 
