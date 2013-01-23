@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Estail by jweir</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Estail</h1>
+        <p>Tail or pipe anything over HTTP</p>
+
+        <p class="view"><a href="https://github.com/jweir/estail">View the Project on GitHub <small>jweir/estail</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/jweir/estail/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jweir/estail/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jweir/estail">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Tail (or pipe) anything to a web browser or web browsers.</p>
+
+<h2>ESTail (Event Source Tail)</h2>
+
+<p>Useage</p>
+
+<pre><code>tail -f somefile.log | ./estail
+</code></pre>
+
+<p>Open a browser to localhost:8080 or maybe MachineName.local:8080</p>
+
+<p>Need to clear the buffer? Refresh the browser.</p>
+
+<h3>Get and Build</h3>
+
+<p>Requires <a href="http://golang.org/doc/install">Go</a> to be installed</p>
+
+<pre><code>git clone git@github.com:jweir/estail.git
+cd estail
+go get &amp;&amp; go build
+</code></pre>
+
+<p>You should now have a binary file <code>estail</code>. Install in your PATH and you will be good to go.</p>
+
+<h3>Why</h3>
+
+<p>I wanted to stream some log files from one machine to a tablet.</p>
+
+<h3>Options</h3>
+
+<pre><code>-p # http port
+-v # display STDOUT in the terminal
+</code></pre>
+
+<p>Want more options? Fork it!</p>
+
+<h3>License</h3>
+
+<p>Copyright (c) 2013 John Weir</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/jweir">jweir</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
