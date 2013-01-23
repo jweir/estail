@@ -16,7 +16,7 @@ Need to clear the buffer? Refresh the browser.
 
 Requires [Go](http://golang.org/doc/install) to be installed
 
-    git clone git@github.com:jwier/estail.git
+    git clone git@github.com:jweir/estail.git
     cd estail
     go get && go build
 
