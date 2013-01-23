@@ -26,7 +26,10 @@ I wanted to stream some log files from one machine to a tablet.
 
 ### Options
 
-Want options? Fork it!
+    -p # http port
+    -v # display STDOUT in the terminal
+    
+Want more options? Fork it!
 
 ### License 
 
