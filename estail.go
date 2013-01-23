@@ -13,10 +13,13 @@ import (
 	eventsource "github.com/antage/eventsource/http"
 	"log"
 	"net/http"
+  "flag"
 	"os"
 )
 
 var Stdin *bufio.Reader
+var printOut bool
+var port string
 
 func main() {
 	es := eventsource.New(nil)
@@ -32,15 +35,21 @@ func main() {
 				break
 			}
 			es.SendMessage(string(line), "", "")
+      if printOut == true{
+        fmt.Println(string(line))
+      }
 		}
 	}()
 
-	log.Println("ESTail starting at http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Printf("ESTail starting at http://localhost:%s\n", port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
 
 func init() {
 	Stdin = bufio.NewReader(os.Stdin)
+  flag.BoolVar(&printOut, "v", false, "print the STDOUT (quiet by default)")
+  flag.StringVar(&port, "p", "8080", "http port")
+  flag.Parse()
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
