@@ -92,13 +92,13 @@ func template() string {
       var addMark = false;
 
       setInterval(function(){
-        console.log("hi", addMark)
         if(addMark){ target.append($("<hr/>")); addMark = false}
       },3000)
 
       source.onmessage = function(e){
         addMark = true;
-        target.append($("<div>"+parse(e.data)+"</div>"))
+        var d = $("<div/>")
+        target.append(d.text(parse(e.data)))
         $(document).scrollTop($(document).height())
       }
     }
