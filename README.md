@@ -20,7 +20,7 @@ Requires [Go](http://golang.org/doc/install) to be installed
     cd estail
     go get && go build
 
-You should now have a binary file `estail.` Install in your PATH and you will be good to go.
+You should now have a binary file `estail`. Install in your PATH and you will be good to go.
 
 ### Options
 
