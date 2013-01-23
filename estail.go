@@ -1,3 +1,10 @@
+// ESTail "broadcasts" anything piped to over HTTP using EventSource
+//
+// Example
+//    tail -f file.log | go run estail.go
+//
+// Then open http://localhost:8080
+//
 package main
 
 import (

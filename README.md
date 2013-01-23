@@ -2,7 +2,7 @@ Tail (or pipe) anything to a web browser or web browsers.
 
 ## ESTail (Event Source Tail)
 
-I want to watch some log files on remote browser, this makes it easy.
+I want to watch some log files on a remote browser. This makes it easy.
 
 Useage
 
@@ -20,7 +20,11 @@ Requires [Go](http://golang.org/doc/install) to be installed
     cd estail
     go get && go build
 
-You should now have a binary file `estail`
+You should now have a binary file `estail.` Install in your PATH and you will be good to go.
+
+### Options
+
+Want options? Fork it!
 
 ### License 
 
