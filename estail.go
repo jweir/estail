@@ -8,10 +8,10 @@
 package main
 
 import (
-  "log"
 	"bufio"
 	"fmt"
 	eventsource "github.com/antage/eventsource/http"
+	"log"
 	"net/http"
 	"os"
 )
@@ -35,7 +35,7 @@ func main() {
 		}
 	}()
 
-  log.Println("ESTail starting at http://localhost:8080")
+	log.Println("ESTail starting at http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
@@ -43,12 +43,12 @@ func init() {
 	Stdin = bufio.NewReader(os.Stdin)
 }
 
-func index(w http.ResponseWriter, r *http.Request) { 
-    fmt.Fprintf(w, template())
+func index(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, template())
 }
 
 func template() string {
-  return `
+	return `
   <!DOCTYPE html>
 
   <html>
