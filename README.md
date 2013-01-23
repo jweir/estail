@@ -22,7 +22,7 @@ You should now have a binary file `estail`. Install in your PATH and you will be
 
 ### Why
 
-I wanted to stream some log files from one machine to an ipad.
+I wanted to stream some log files from one machine to a tablet.
 
 ### Options
 
