@@ -9,11 +9,11 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	eventsource "github.com/antage/eventsource/http"
 	"log"
 	"net/http"
-  "flag"
 	"os"
 )
 
@@ -35,9 +35,9 @@ func main() {
 				break
 			}
 			es.SendMessage(string(line), "", "")
-      if printOut == true{
-        fmt.Println(string(line))
-      }
+			if printOut == true {
+				fmt.Println(string(line))
+			}
 		}
 	}()
 
@@ -47,9 +47,9 @@ func main() {
 
 func init() {
 	Stdin = bufio.NewReader(os.Stdin)
-  flag.BoolVar(&printOut, "v", false, "print the STDOUT (quiet by default)")
-  flag.StringVar(&port, "p", "8080", "http port")
-  flag.Parse()
+	flag.BoolVar(&printOut, "v", false, "print the STDOUT (quiet by default)")
+	flag.StringVar(&port, "p", "8080", "http port")
+	flag.Parse()
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
